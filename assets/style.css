@@ -1,4 +1,4 @@
-html {
+﻿html {
   font-family: rubik, sans-serif;
   font-size: 11px;
   line-height: 15px;
@@ -7,12 +7,23 @@ html {
   background: black;
 }
 
+@font-face {
+    font-family: omeplus;
+    src: url(OMEPLUS.ttf);
+}
+
+@font-face {
+  font-family: boku2b;
+  src: url(Boku2-Bold.otf);
+}
+
 h1 {
-  font-family: Hammersmith One, sans-serif;
+  font-family: boku2b, sans-serif;
   display: block;
-  font-size: 80px;
+  font-size: 70px;
   margin: 0;
-  line-height: 70px;
+  line-height: 90px;
+  margin-top: -20px;
   letter-spacing: 5px;
 }
 
