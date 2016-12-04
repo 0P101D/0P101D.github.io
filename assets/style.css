@@ -1,0 +1,82 @@
+html {
+  font-family: rubik, sans-serif;
+  font-size: 11px;
+  line-height: 15px;
+  overflow: hidden;
+  color: white;
+  background: black;
+}
+
+h1 {
+  font-family: Hammersmith One, sans-serif;
+  display: block;
+  font-size: 80px;
+  margin: 0;
+  line-height: 70px;
+  letter-spacing: 5px;
+}
+
+#bg {
+  background-image: url("img/index-bg.png");
+  background-size: cover;
+  position: absolute;
+  width: 120vw;
+  height: 120vh;
+  top: -10vh;
+  left: -10vw;
+  filter: blur(15px);
+  -webkit-filter: blur(15px);
+  opacity: 0.8;
+}
+
+#top {
+  width: 310px;
+  text-align: center;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 10px solid;
+  padding: 15px;
+  z-index: 10;
+  background: #321;
+  mix-blend-mode: screen;
+}
+
+
+hr {
+  border: none;
+  margin: 10px auto;
+  border-top: 2px solid;
+  width: 40%;
+}
+
+.links {
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 10px;
+}
+
+b, a {
+  font-weight: normal;
+  color: gold;
+}
+
+a {text-decoration: none; transition: color 250ms;}
+
+a:hover {
+  color: cadetblue;
+}
+
+#tooltip {
+  margin: 12px;
+  background: cadetblue;
+  font-family: hammersmith one, sans-serif;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  padding: 3px 8px;
+  z-index: 30;
+  color: white;
+}
