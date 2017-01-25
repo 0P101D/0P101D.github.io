@@ -1,0 +1,38 @@
+
+<div class="lenses"></div>
+<div class="lenses two"></div>
+<style>
+
+.lenses {
+  background: url("http://ultraimg.com/images/2017/01/19/VRZ3.png");
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+}
+
+.lenses::before {
+  width: 200px;
+  height: 200px;
+  content: "";
+  background: red;
+  position: absolute;
+  mix-blend-mode: darken;
+}
+
+.two {
+  position: absolute;
+  margin-top: -200px;
+  mix-blend-mode: screen;
+  isolation: isolate;
+  transition: margin 1s;
+}
+
+.two::before {
+  background: cyan;
+}
+
+.two:hover {
+  margin-top: -197px;
+  margin-left: 3px;
+}
+</style>
