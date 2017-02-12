@@ -1,7 +1,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <div id="sidebar">
-<div id="sidetab" onclick="toggleSidebar()">:T</div>
+<div id="sidetab" onclick="toggleSidebar()">:T</div><div class="sidecontent">
+
+  sidebar content goes here or something. shrugs a lot tbh it might seem like i have an idea what I'm doing but I'm mimicking things from memory and I've touched jquery like 3 times in my life
+</div>
     </div><div id="maincontent">
 <div id="wrapper">
 
@@ -34,7 +37,7 @@ body > table, body > table tr {
   display: inline-block;
   width: 0px;
   height: 100vh;
-  background: aliceblue;
+  background: #888;
   transition: width 1s;
   position: relative;
 }
@@ -44,6 +47,9 @@ body > table, body > table tr {
   width: 40px;
   height: 40px;
   background: #888;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-top: 20px;
   right: -40px;
   font: 40px/40px Calibri;
   text-align: center;
@@ -51,6 +57,14 @@ body > table, body > table tr {
 
 .sideopen {
   width:200px!important;
+}
+
+.sidecontent {
+  padding: 10px;
+  width:180px;
+  text-align: justify;
+  position: absolute;
+  right: 0;
 }
 
 #maincontent {
