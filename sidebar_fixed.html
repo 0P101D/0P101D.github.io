@@ -1,0 +1,74 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<div id="sidebar">
+<div id="sidetab" onclick="toggleSidebar()">:T</div>sidebar content goes here or something. shrugs a lot tbh it might seem like i have an idea what I'm doing but I'm mimicking things from memory and I've touched jquery like 3 times in my life</div>
+
+<div id="maincontent">
+<div id="wrapper"></div>
+
+</div>
+
+<script>
+  $('#wrapper').load("lipsum.txt");
+  var sidebar = $('#sidebar');
+// if you're wondering this is just a code to import lorem ipsum text because I'm lazy
+
+function toggleSidebar() {
+    if (sidebar.hasClass("sideopen")) {
+      sidebar.removeClass("sideopen");
+    } else {
+      sidebar.addClass("sideopen");
+    }
+  }
+</script>
+<style>
+html {background: #444;font: 11px/15px Calibri, sans-serif;}
+body {margin:0;}
+
+body > table, body > table tr {
+  padding: 0; margin: 0;
+}
+
+#sidebar {
+  vertical-align:top;
+  width: 180px;
+  padding: 10px;
+  height: calc(100vh - 20px);
+  background: #888;
+  left: -200px;
+  transition: left 1s;
+  position: fixed;
+}
+
+#sidetab {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #888;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-top: 20px;
+  right: -40px;
+  font: 40px/40px Calibri;
+  text-align: center;
+}
+
+.sideopen {
+  left:0px!important;
+}
+
+#maincontent {
+  background: #666;
+  width: 100%;
+  height: 100vh;
+  transition: width 1s;
+  overflow:auto;
+}
+
+#wrapper {
+  width: 400px;
+  margin: 0px auto;
+  background: #AAA;
+  padding: 50px;
+}
+</style>
