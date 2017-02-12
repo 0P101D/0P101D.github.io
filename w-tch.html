@@ -1,0 +1,59 @@
+﻿<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+
+<div id="header"><div class="image"></div>
+<div id="logo">W <i class="fa fa-cog fa-spin fa-3x fa-fw"></i> T C H</div>
+</div>
+</div>
+<style>
+html {background: black;}
+
+#header {
+min-width: 550px;
+width: 80vw;
+height: 80vh;
+position: absolute;
+top: 10vh;
+left: 10vw;
+background: white;
+transition: background 1s;
+}
+
+.image {
+width: 100%;
+height: 100%;
+background-image: url("http://ultraimg.com/images/2016/11/01/x9Ou.png");
+opacity: 0;
+transition: opacity 2s;
+background-size: cover;
+}
+
+#logo {
+color: transparent;
+text-shadow: 0px 0px 0px black, 0px 0px 0px black;
+font-family: "work sans", sans-serif;
+font-size: 80px;
+transition: text-shadow 1s, box-shadow 1s;
+box-shadow: 0px 0px 0px 5px black,
+	inset 0px 0px 0px 5px black;
+position: absolute;
+transform: translate(-50%, -50%);
+top: 50%;
+left: 50%;
+padding: 20px 50px;
+width: 421px;
+}
+
+#logo i {font-size: 100%; margin: 0px -15px;}
+
+#header:hover #logo {
+text-shadow: 0px 0px 20px white, 0px 0px 20px white;
+box-shadow: 0px 0px 20px 10px white,
+	inset 0px 0px 20px 10px white;
+}
+
+#header:hover {background: black;}
+#header:hover .image {opacity: 1;}
+
+
+</style>
