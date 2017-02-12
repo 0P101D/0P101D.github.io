@@ -2,11 +2,7 @@
 
 <div id="sidebar">
 <div id="sidetab" onclick="toggleSidebar()">:T</div>sidebar content goes here or something. shrugs a lot tbh it might seem like i have an idea what I'm doing but I'm mimicking things from memory and I've touched jquery like 3 times in my life</div>
-
-<div id="maincontent">
 <div id="wrapper"></div>
-
-</div>
 
 <script>
   $('#wrapper').load("lipsum.txt");
@@ -25,10 +21,6 @@ function toggleSidebar() {
 html {background: #444;font: 11px/15px Calibri, sans-serif;}
 body {margin:0;}
 
-body > table, body > table tr {
-  padding: 0; margin: 0;
-}
-
 #sidebar {
   vertical-align:top;
   width: 180px;
@@ -40,7 +32,7 @@ body > table, body > table tr {
   position: fixed;
 }
 
-#sidetab {
+#sidetab { // the little dingaling that you click to open up the sidebar
   position: absolute;
   width: 40px;
   height: 40px;
@@ -57,18 +49,11 @@ body > table, body > table tr {
   left:0px!important;
 }
 
-#maincontent {
-  background: #666;
-  width: 100%;
-  height: 100vh;
-  transition: width 1s;
-  overflow:auto;
-}
-
 #wrapper {
   width: 400px;
   margin: 0px auto;
-  background: #AAA;
+  background: #CCC;
   padding: 50px;
+  text-align: justify;
 }
 </style>
