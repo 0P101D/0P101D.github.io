@@ -1,0 +1,42 @@
+.kensaku {
+  width: 350px;
+  height: 300px;
+  color: #876;
+  border: 4px double #ba9;
+  background: white;
+  position: relative;
+  margin: 50px auto;
+  font: 11px/15px Amiko, Calibri, sans-serif;
+}
+
+.kensaku::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 300px;
+  left: 0;
+  background: url(http://i.imgur.com/pTwua8d.png);
+  background-size: cover;
+}
+
+.kensaku > div {
+  width: 230px;
+  height: 280px;
+  margin: 9px;
+  position: absolute;
+  right: 0;
+  border: 1px solid #edc;
+  overflow: auto;
+}
+
+.kensaku > div > span {
+  display: block;
+  padding: 15px;
+  text-align: justify;
+}
+
+.kensaku ::-webkit-scrollbar {width: 5px;}
+.kensaku ::-webkit-scrollbar-track {background:white;border:none;}
+.kensaku ::-webkit-scrollbar-thumb {background: #987; border: 2px solid #fff;
+}
