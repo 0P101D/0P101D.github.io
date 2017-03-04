@@ -1,12 +1,13 @@
-<meta charset="utf-8" />
-<title>Q</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<head><meta charset="utf-8" />
+  <title>Q</title>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=UnifrakturMaguntia|Vidaloka|Amiko" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+</head>
 <body>
   <div class="title">Und nichts sagst du.</div>
-  <div id="container">
-    <div class="content">
-      <div class="text">
+  <div id="container"><div class="content"><div class="text">
         <p>"And you say nothing."
 
           I can't brain
@@ -15,119 +16,13 @@
           <b>faceclaim</b> William Macbeth of Kekkai Sensen.
 
           <span style="display:block" align="center"><b>German. Villain. AHS Operative. SHA student.</b></span>
-            <b>History</b><blockquote id="history"></blockquote>
-            <b>personality (and misc notes)</b><blockquote id="persona"></blockquote>
-            <b>ability: (name pending)</b><blockquote id="ability"></blockquote></p>
+          <b>History</b><blockquote id="history"></blockquote>
+          <b>personality (and misc notes)</b><blockquote id="persona"></blockquote>
+          <b>ability: (name pending)</b><blockquote id="ability"></blockquote></p>
       </div></div></div>
 </body>
-<link href="https://fonts.googleapis.com/css?family=UnifrakturMaguntia|Vidaloka|Amiko" rel="stylesheet" />
 <script>
   $('#history').load("history.html");
   $('#persona').load("persona.html");
   $('#ability').load("ability.html");
 </script>
-<style>
-body {
-  font: 11px/15px Amiko, sans-serif;
-  margin: 0;
-  background: #555;
-}
-
-blockquote {
-  margin: 5px;
-  text-align: justify;
-  border: 1px solid #bbb;
-  padding: 10px;
-  max-height: 130px;
-  overflow: auto;
-}
-
-.title {
-  font: 50px/50px UnifrakturMaguntia;
-  position: absolute;
-  top: 50vh;
-  left: 10px;
-  margin-top: -200px;
-  color: white;
-}
-
-#container {
-  background: #999;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-  top: 50vh;
-  margin-top: -150px;
-}
-
-#container::before {
-  content:"";
-  position: absolute;
-  background: url(http://i.imgur.com/zRmfj0y.png) no-repeat top right;
-  background-size: cover;
-  -webkit-filter: grayscale(0.7);
-  height: calc(100% + 40px);
-  width: 500px;
-  top: -20px;
-  right: -70px;
-  outline: 5px solid #fff;
-  outline-offset: -3px;
-}
-
-.content {
-  position: absolute;
-  width: calc(100% - 300px);
-  min-width: 300px;
-  height: 100%;
-  background: #fff;
-}
-
-.content::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100px;
-  background: linear-gradient(to right, #fff, rgba(255,255,255,0.75),rgba(255,255,255,0.3), rgba(255, 255, 255, 0));
-  right: -100px;
-  top: 0;
-}
-
-.text {
-  height: calc(100% - 40px);
-  padding: 20px 20px;
-  margin: 0;
-  overflow: auto;
-}
-
-.text > p {
-  text-align: justify;
-  margin: 0; padding: 0;
-  white-space: pre-line;
-}
-
-b {
-  font-family: Vidaloka;
-  text-transform: uppercase;
-  color: #600;
-}
-
-a {
-  text-decoration: none;
-  background: #600;
-  color: white;
-  padding: 1px 5px;
-  transition: color .25s, background .25s;
-}
-
-a:hover {color: #600; background: transparent;}
-
-::-webkit-scrollbar {
-  width: 5px;
-
-}
-
-::-webkit-scrollbar-thumb {
-  background: black;
-  border: 2px solid #fff;
-}
-</style>
