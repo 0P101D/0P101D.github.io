@@ -170,6 +170,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 2px;
   overflow: auto;
+  margin-bottom: 10px;
 }
 
 .info > span {
@@ -177,7 +178,7 @@ body {
   margin: 15px;
 }
 
-.info.commtype {
+.commtype {
   height: 312px;
   width: calc(100% - 320px);
 }
@@ -186,6 +187,8 @@ body {
   margin: 0;
   padding-left: 35px;
 }
+
+.info, .imgframe, #gallery label {box-shadow: 1px 1px 2px rgba(0,0,0,0.2)}
 
 .commtype ul ul {padding-left:20px;list-style:none;margin-bottom:5px;opacity:0.7;}
 .commtype ul ul > li::before {content: "+ ";font-weight:bold;}
@@ -218,11 +221,9 @@ b {color:#222;}
 @media only screen and (max-width: 600px) {
     #gallery {margin: 0px auto 10px; float: none;}
 
-    .commtype, .form, .good {width: 100%;}
-
-    .form, .good {
+    .commtype, .form, .good {
+      width: 100%;
       float: none;
-      margin: 0px 0px 15px;
     }
 }
 
