@@ -1,5 +1,5 @@
 $('#gallery').load("gallery.html");
-$('.commtype span').load("commtype.html");
+// $('.commtype span').load("commtype.html");
 $('.rules span').load("rules.html");
 $('.form span').load("form.html");
 $('.good span').load("good.html");
