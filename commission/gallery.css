@@ -1,0 +1,71 @@
+#gallery {
+  width: 302px;
+  text-align: center;
+  float: left;
+  margin-right: 16px;
+}
+
+#gallery input[type="radio"] {display: none;}
+
+#gallery label:hover {background: #ddd;}
+
+#gallery label {
+  border: 1px solid rgba(0,0,0,0.3);
+  margin: 0 3px 5px 3px;
+  padding: 5px;
+  font-size: 12px;
+  display: inline-block;
+  transition: background 0.5s;
+  border-radius: 50%;
+}
+
+#gallery label i {line-height: 15px;}
+
+
+.imgframe {
+  border: 1px solid rgba(0,0,0,0.1);
+  height: 280px;
+  background: #7F7F7F;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+}
+
+.imgframe img {
+  max-width: 120%;
+  max-height: 120%;
+  position: absolute;
+  opacity: 0;
+  transition-property: max-height, max-width, margin, opacity;
+  transition-duration: 1s;
+  margin: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.imgframe:hover img {
+  max-width: 200%;
+  max-height: 200%;
+  margin-top: 70%;
+}
+
+
+
+.imgframe:hover .fullbody {
+  max-height: 400%;
+  margin-top: 170%;
+}
+
+
+.imgframe .comment {
+  opacity: 0;
+  transition: opacity 1s;
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(0,0,0,0.6);
+  color:white;
+  padding:5px;
+}
+
+:checked + img, :checked + img + .comment {
+  opacity: 1;
+}
