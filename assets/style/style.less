@@ -232,7 +232,6 @@ table {
     background: rgba(255,255,255,0.5);
   }
 
-
   #hcb_submit {padding: 0 10px;}
 
   a[href*="htmlcommentbox"] {text-shadow: none!important;}
@@ -250,6 +249,16 @@ table {
   a[href*="logout?"] {
     &::before {
       content: "\f08b";
+      font: 11px/35px 'FontAwesome';
+      color: #fff;
+    }
+
+    img {display:none;}
+  }
+
+  a[alt="[login]"] {
+    &::before {
+      content:"\f090";
       font: 11px/35px 'FontAwesome';
       color: #fff;
     }
