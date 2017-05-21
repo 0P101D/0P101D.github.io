@@ -1,0 +1,209 @@
+@import "https://fonts.googleapis.com/css?family=Ubuntu|Montserrat";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@font-face {
+  font-family: "Noto Sans JPN";
+  src: url('../font/NotoSansCJKjp.otf');
+}
+
+@size(n) {
+  width: n;
+  height: n;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #03111e;
+  overflow: hidden;
+}
+
+@blur: 25px;
+
+#bg {
+  width: ~'calc(100vw + @blur*2)';
+  position: relative;
+  margin: -@blur;
+  text-align: center;
+  img {
+    width:100%; pointer-events: none;
+    -webkit-filter: blur(@blur);
+    filter: blur(@blur);
+  }
+  &::before {
+    content: ""; display: block;
+    background: linear-gradient(to bottom, rgba(3, 17, 30, 0), rgba(3, 17, 30, 1));
+    height: 25%; width: 100%;
+    position: absolute; bottom: calc(-@blur*2);
+    z-index: 1;
+  }
+}
+
+@genfont: 'Ubuntu', 'Noto Sans JPN', sans-serif;
+@titlefont: 'Montserrat', 'Noto Sans JPN', sans-serif;
+
+#content {
+  background: rgba(0,0,0,0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+}
+
+table {
+  border-collapse: collapse;
+    &, tr, td {
+    padding:0;
+    margin:0;
+  }
+}
+
+#title {
+  color: #fff;
+  width: 380px;
+  margin: -15px auto 15px;
+  height: 0;
+  font: 30px/0 @titlefont;
+
+  span {
+    font-size: 10px;
+  }
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+}
+
+#wrapper {
+  border: 1px solid white;
+  border-width: 1px 0;
+  padding: 10px 24px;
+  font: 11px/15px @genfont;
+  width: 400px;
+  height: 300px;
+  margin: 0 auto;
+  text-align: justify;
+  position: relative;
+
+  & > div {
+    border: 1px solid white;
+    border-width: 0 1px;
+    height: 320px;
+    padding: 25px 0;
+    margin: -35px 0;
+  }
+
+  article {
+    background: rgba(255, 255,2555,0.6);
+    color: rgba(0,0,0,0.7);
+    padding: 20px;
+    margin: 10px;
+    width: ~'calc(100% - 70px)';
+    height: ~'calc(100% - 20px)';
+    box-sizing: border-box;
+    overflow: auto;
+    position: absolute;
+    top: 0; left: 25px;
+    opacity: 1;
+    transition-property: top, left,  opacity;
+    transition-delay: .75s;
+
+    a {
+      color: #678;
+
+      &:hover {color:#234};
+    }
+  }
+
+  .page, .contact {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    border-collapse: separate;
+    margin: -2px;
+    padding: 5px 0;
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+
+    td {
+      @size(20px);
+
+      transition: color .5s;
+      &:hover {color:#fff;cursor:pointer;}
+
+    }
+  }
+
+  .contact {top: auto; bottom: 5px;}
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: color .5s;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 7px; height: 7px;
+
+  &-track {
+      background: #fff;
+      background-clip: content-box;
+      border: solid transparent;
+
+      ::horizontal {border-width: 3px 0;}
+      ::vertical {border-width: 0 3px;}
+  }
+
+  &-thumb {
+      border: 1px solid transparent;
+      background: #fff;
+      background-clip: content-box;
+      border-radius: 20px;
+  }
+
+  &-corner {
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+}
+
+
+
+#tooltip {
+  margin: 12px;
+  background: rgba(255,255,255,0.8);
+  font: 11px/15px @genfont;
+  padding: 2px 5px;
+  z-index: 30;
+  color: rgba(0,0,0,0.8);
+}
+
+
+@keyframes goout {
+  from {
+    opacity: 1;
+    left: 25px;
+  }
+
+  to {
+    opacity: 0;
+    left: 75px;
+  }
+}
+
+@keyframes goin {
+  from {
+    opacity: 0;
+    left: -50px;
+  }
+
+  to {
+    opacity: 1;
+    left: 25px;
+  }
+}
