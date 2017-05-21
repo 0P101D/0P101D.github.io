@@ -207,3 +207,57 @@ table {
     left: 25px;
   }
 }
+
+
+#HCB_comment_box {
+  h3 {
+    margin: 0;
+    font: 15px/17px 'Montserrat', sans-serif;
+  }
+
+  input {
+    border-radius: 50px;
+    border: none;
+    padding: 0 5px;
+    font: 11px/15px 'Ubuntu', sans-serif;
+    margin: 10px;
+    color: inherit;
+    background: rgba(255,255,255,0.5);
+  }
+
+  textarea {
+    border-radius: 5px;
+    border: none;
+    font: 11px/15px 'Ubuntu', sans-serif;
+    background: rgba(255,255,255,0.5);
+  }
+
+
+  #hcb_submit {
+    padding: 0 10px;
+  }
+
+  a[href*="htmlcommentbox"] {text-shadow: none!important;}
+  a[title="remove link"] {display:none;}
+
+  a[title="account"] {
+    &::before {
+      content: "\f013";
+      font: 11px/15px 'FontAwesome';
+      color: #fff;
+    }
+    img {display:none;}
+  }
+
+  a[href*="logout?"] {
+    &::before {
+      content: "\f08b";
+      font: 11px/35px 'FontAwesome';
+      color: white;
+    }
+
+    img {display:none;}
+  }
+
+  a:hover, a:hover::before {color:#234!important;}
+}
