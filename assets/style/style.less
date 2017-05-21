@@ -234,37 +234,79 @@ table {
 
   #hcb_submit {padding: 0 10px;}
 
-  a[href*="htmlcommentbox"] {text-shadow: none!important;}
-  a[title="remove link"] {display:none;}
+  a {
+    color: #fff!important;
 
-  a[title="account"] {
+    &::before {transition: color .5s;}
+
+    &[href*="htmlcommentbox"] {text-shadow: none!important;}
+    &[title="remove link"] {display:none;}
+
+    &[title="account"] {
+      &::before {
+        content: "\f013";
+        font: 11px/15px 'FontAwesome';
+        color: #fff;
+      }
+      img {display:none;}
+    }
+    &[href*="logout?"] {
+      &::before {
+        content: "\f08b";
+        font: 11px/35px 'FontAwesome';
+        color: #fff;
+      }
+      img {display:none;}
+    }
+    &[href*="auth?scope=email"] {
+      &::before {
+        content:"\f090";
+        font: 11px/35px 'FontAwesome';
+        color: #fff;
+      }
+      img {display:none;}
+    }
+
+    &:hover, &:hover::before {color:#234!important;}
+  }
+
+  .comment {position: relative;}
+  .hcb-comment-tb {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .del {
+    img {display:none;}
     &::before {
-      content: "\f013";
+      content: "\f00d";
       font: 11px/15px 'FontAwesome';
-      color: #fff;
+      color: #a66;
     }
-    img {display:none;}
   }
 
-  a[href*="logout?"] {
+  blockquote {
+      background: rgba(255,255,255,0.3);
+      padding: 5px;
+      border-radius: 2px;
+      margin: 3px 5px;
+  }
+
+  .hcb-flag {
     &::before {
-      content: "\f08b";
-      font: 11px/35px 'FontAwesome';
-      color: #fff;
+      content: "\f024";
+      font: 11px/15px 'FontAwesome';
     }
-
     img {display:none;}
   }
 
-  a[href*="auth?scope=email"] {
+  .hcb-like {
+    margin-left: 10px;
     &::before {
-      content:"\f090";
-      font: 11px/35px 'FontAwesome';
-      color: #fff;
+      content: "\f164";
+      font: 11px/15px 'FontAwesome';
     }
-
     img {display:none;}
   }
-
-  a:hover, a:hover::before {color:#234!important;}
 }
