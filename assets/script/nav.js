@@ -1,4 +1,4 @@
-var page = new Array("home", "works", "comm", "credit");
+var page = new Array("home", "works", "comm", "guest", "credit");
 var curr = 0;
 
 function goto(n) {
@@ -13,5 +13,6 @@ $(document).ready(function() {
   $('article#home').load('content/about.html');
   $('article#works').load('content/gallery.html');
   $('article#comm').load('content/commission.html');
+  $('article#guest').load('content/guest.html')
   $('article#credit').load('content/credit.html');
 });
