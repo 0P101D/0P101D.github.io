@@ -212,14 +212,14 @@ table {
 #HCB_comment_box {
   h3 {
     margin: 0;
-    font: 15px/17px 'Montserrat', sans-serif;
+    font: 15px/17px @titlefont;
   }
 
   input {
     border-radius: 50px;
     border: none;
     padding: 0 5px;
-    font: 11px/15px 'Ubuntu', sans-serif;
+    font: 11px/15px @genfont;
     margin: 10px;
     color: inherit;
     background: rgba(255,255,255,0.5);
@@ -233,9 +233,7 @@ table {
   }
 
 
-  #hcb_submit {
-    padding: 0 10px;
-  }
+  #hcb_submit {padding: 0 10px;}
 
   a[href*="htmlcommentbox"] {text-shadow: none!important;}
   a[title="remove link"] {display:none;}
@@ -253,7 +251,7 @@ table {
     &::before {
       content: "\f08b";
       font: 11px/35px 'FontAwesome';
-      color: white;
+      color: #fff;
     }
 
     img {display:none;}
