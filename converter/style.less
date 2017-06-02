@@ -1,0 +1,80 @@
+@import "https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono|Montserrat";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+
+@genfont: 'Ubuntu', 'Noto Sans JPN', sans-serif;
+
+body {
+  margin: 0;
+  font: 11px/15px @genfont;
+}
+
+.wrapper {
+  display: flex;
+}
+
+#result {
+  background: #fff;
+  border: none;
+}
+
+#content {
+  padding: 10px;
+  text-align: justify;
+  text-align-last: center;
+
+  .input, .output {
+    width: 100%;
+    margin: 5px 0;
+    border-top: 1px solid #ccc;
+    font: inherit;
+    text-align: center;
+
+    textarea {
+      width: 100%;
+      font-family: 'Ubuntu Mono', monospace;
+      text-align: left;
+      text-align-last: left;
+    }
+  }
+
+  output {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    #content {
+      height: ~'calc(50vh-21px)';
+      overflow: auto;
+      border-bottom: 1px solid;
+      width: ~'calc(100vw-20px)';
+    }
+
+    #result {
+      height: 50vh;
+      width: 100vw;
+    }
+}
+
+@media only screen and (min-width: 701px) {
+    .wrapper {
+      flex-direction: row;
+    }
+
+    #content {
+      width: ~'calc(50vw-21px)';
+      height: ~'calc(100vh-20px)';
+      border-right: 1px solid;
+    }
+
+    #result {
+      width: 50vw;
+      height: 100vh;
+    }
+}

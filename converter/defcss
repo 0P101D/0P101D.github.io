@@ -1,0 +1,9 @@
+.example {
+  background: #fff;
+  padding:5px;
+  border:1px solid;
+  width: 300px;
+  margin: 0 auto;
+  font: 11px/15px 'Ubuntu', sans-serif;
+}
+.example b {color:#f00;}

@@ -1,0 +1,77 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>proboards newclass converter</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link href="style.less" rel="stylesheet/less" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="../assets/script/less.min.js" data-strictUnits="true"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+
+  <div id="content">
+    For people like me who code their templates in regular HTML/CSS first and are too lazy to convert to [newclass] tag/proboards format. Have fun, try not to die.
+    <br /><br />Note: false positives may exist for warnings. It's your job to remove stuff.
+      <br />
+      <table class="input">
+        <thead>
+
+        <tr>
+          <td>
+            HTML
+          </td>
+          <td>
+            CSS
+          </td>
+        </tr>
+
+      </thead>
+        <tr>
+          <td>
+            <textarea id="inputHTML" rows="8">
+            </textarea>
+          </td>
+          <td>
+<textarea id="inputCSS" rows="8">.example {background: #fff;padding:5px;border:1px solid;}
+.example b {color:#f00;}</textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">google fonts:
+            <input type="text" id="googlefont" value="Ubuntu"/>
+          </td>
+        </tr>
+      </table>
+      <table class="output">
+        <thead>
+        <tr>
+          <td>result</td>
+        </tr>
+
+        <tr>
+          <td id="warn">
+          </td>
+        </tr>
+      </thead>
+        <tr>
+          <td>
+            <textarea id="output" rows="8"></textarea>
+          </td>
+        </tr>
+      </table>
+<button onclick="update()">submit</button>
+  </div>
+
+
+  <div id="output">
+    <iframe id="result"></iframe>
+  </div>
+
+</div>
+</body>
+
+</html>
