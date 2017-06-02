@@ -108,7 +108,7 @@ function convHTML() {
   if (inv.length > 0) {
     $("#warn").html("<b>WARNING:</b> possible invalid classes<br>");
     $("#warn").append(inv);
-  }
+  } else {$("#warn").html("");};
   return result;
 }
 
