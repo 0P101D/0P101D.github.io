@@ -16,12 +16,14 @@ body {
 #result {
   background: #fff;
   border: none;
+  overflow: auto;
 }
 
 #content {
   padding: 10px;
   text-align: justify;
   text-align-last: center;
+  overflow: auto;
 
   .input, .output {
     width: 100%;
@@ -51,7 +53,6 @@ body {
 
     #content {
       height: ~'calc(50vh-21px)';
-      overflow: auto;
       border-bottom: 1px solid;
       width: ~'calc(100vw-20px)';
     }
