@@ -121,7 +121,7 @@ function convCSS() {
   input = input.replace(/{\s+/g, "{");
   input = input.replace(/}(?:\r\n|\r|\n)/g, "}\r\n") + "\r\n";
   input = input.replace(/}(?:\r\n|\r|\n)@/g, "} @");
-  input = input.replace(/(?:\r\n|\r|\n)(\.)/g, "\r\n[newclass=\"").replace(/}(?:\r\n|\r|\n)/g, "[/newclass]\r\n");
+  input = input.replace(/(?:\r\n|\r|\n)(\.)/g, "\r\n[newclass=\"\.").replace(/}(?:\r\n|\r|\n)/g, "[/newclass]\r\n");
 
   var lines = input.split(/(?:\r\n|\r|\n)/g);
   var result = "";
